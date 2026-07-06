@@ -11,11 +11,11 @@ Each aircraft was designed and built to answer questions raised by the previous 
 | # | Aircraft | Configuration | Outcome |
 |---|---|---|---|
 | 1 | Delta Canard | Delta wing + canard, rear pusher | ❌ Never airborne |
-| 2 | Flying Wing | Lightweight foamboard flying wing | ✅ Flew — later lost in a crash |
-| 3 | Flying Wing (V1 & V2) | Hand-launch flying wing, two iterations | ⚠️ V1 stalled at launch; V2 flew ~1 circuit |
-| 4 | Conventional T-Tail | Fuselage, T-tail, full 3-axis control | ⚠️ ~30 s sustained flight |
-| 5 | Conventional Aircraft | Refined conventional, hand launch | ✅ Successful takeoff and landing |
-| 6 | Simple Trainer | *(details to be added)* | *(to be added)* |
+| 2 | Simplified Tailless | Tailless, three-fin landing gear | ❌ Briefly airborne, flipped and crashed |
+| 3 | Flying Wing (V1 & V2) | Hand-launch flying wing, two iterations | ⚠️ V1 stalled at launch; V2 flew ~3 s |
+| 4 | Conventional T-Tail | Fuselage, T-tail, full 3-axis control | ❌ Never flew — T-tail collapsed on takeoff roll |
+| 5 | Conventional Aircraft | Rebuilt conventional, two attempts | ⚠️ ~30–40 s sustained flight |
+| 6 | Simple Trainer | Smaller version of Plane 5, hand launch | ✅ Successful takeoff, flight, and landing |
 
 ---
 
@@ -23,27 +23,28 @@ Each aircraft was designed and built to answer questions raised by the previous 
 
 **Objective:** First ground-up build — integrate airframe, propulsion, controls, FPV, and landing gear into one aircraft.
 
-**Outcome:** ❌ Never became airborne. Too heavy, wing loading too high, and the foam landing gear failed repeatedly before takeoff speed.
+**Outcome:** ❌ Never became airborne. The foam landing gear repeatedly broke during takeoff attempts; the gear was then removed and the aircraft hand-launched, but it still failed to fly due to a poor thrust-to-weight ratio.
 
 **Key lessons:**
 - Wing loading limits come before features
+- Thrust-to-weight ratio must be checked before building, not after
 - Landing gear must survive repeated takeoff attempts
-- Electronics packaging and mechanical integration add weight fast
+- Systems integration adds weight fast
 
 [![Photos & Flight Videos](https://img.shields.io/badge/📁_Photos_&_Flight_Videos-Google_Drive-4285F4?logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1VOr5R7L0C-D3P6gKFdMUMwoOVN3ra7kY?usp=sharing)
 
 ---
 
-## ✈️ Plane 2 — Flying Wing
+## ✈️ Plane 2 — Simplified Tailless
 
-**Objective:** Cut the weight and complexity of Plane 1 and achieve flight.
+**Objective:** Simplify Plane 1 into a lighter tailless aircraft that can get airborne.
 
-**Outcome:** ✅ First successful flight of the program. Later lost in a crash; flight footage was lost with it.
+**Outcome:** ❌ Briefly became airborne, then flipped and crashed almost immediately — a combination of poor thrust-to-weight ratio and the unusual landing gear geometry (three long downward fins with custom PETG wheels). Phone footage of the attempt was later lost.
 
 **Key lessons:**
-- Simplicity improves reliability
-- Weight reduction matters more than features
-- Construction methods validated for later builds
+- Landing gear geometry affects flight, not just ground handling
+- Thrust-to-weight ratio again — the same failure mode twice made it a permanent design check
+- Simplifying a design is not enough on its own
 
 [![Photos & Flight Videos](https://img.shields.io/badge/📁_Photos_&_Flight_Videos-Google_Drive-4285F4?logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1v9wBFDzPWr2t_yl_6g1mXgYAeFedf6Hl?usp=sharing)
 
@@ -53,7 +54,7 @@ Each aircraft was designed and built to answer questions raised by the previous 
 
 **Objective:** Develop the flying-wing configuration through deliberate iteration.
 
-**Outcome:** ⚠️ V1 stalled immediately after launch — CG was set with conventional-aircraft intuition, which does not apply to tailless aircraft. V2 (corrected CG, electronics bay, landing gear) took off and completed about one circuit before crashing.
+**Outcome:** ⚠️ V1, a minimal hand-launched flying wing, failed immediately — the CG was placed using conventional-aircraft intuition, which does not apply to tailless aircraft. V2 (corrected CG, landing gear, electronics compartment) took off but flew only about three seconds before crashing, primarily due to pilot experience and overly sensitive controls.
 
 **Key lessons:**
 - Flying-wing CG and stability are a separate discipline — the direct reason the LWPLA project starts with a formal MAC/CG analysis
@@ -68,12 +69,11 @@ Each aircraft was designed and built to answer questions raised by the previous 
 
 **Objective:** Move to a conventional layout with full three-axis control.
 
-**Outcome:** ⚠️ Attempt 1: runway vibration broke the T-tail before takeoff. Attempt 2: a 4S battery on a lower-voltage power system killed the motor. Attempt 3 (SunnySky motors): ~30 seconds of sustained flight, then crashed after flying too far to maintain visual orientation.
+**Outcome:** ❌ Never flew. Runway vibration caused the T-tail to collapse during the takeoff roll. Configuration: conventional fuselage with rudder, elevator, and ailerons, ~1.2 m wingspan, aluminum landing gear, and a camera installed but never used.
 
 **Key lessons:**
 - Structural vibration is a real failure mode
-- Power systems must be matched as a system, not upgraded one part at a time
-- Pilot orientation and confidence are part of the engineering problem
+- Tail structures need reinforcement for ground loads, not just flight loads
 
 [![Photos & Flight Videos](https://img.shields.io/badge/📁_Photos_&_Flight_Videos-Google_Drive-4285F4?logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/16gl0GJUmX5MUpb61wPt7LlrZiTKaj13G?usp=sharing)
 
@@ -81,14 +81,14 @@ Each aircraft was designed and built to answer questions raised by the previous 
 
 ## ✈️ Plane 5 — Conventional Aircraft
 
-**Objective:** Refine the Plane 4 design with better construction quality and a simpler operating concept.
+**Objective:** Rebuild the conventional design and achieve sustained flight.
 
-**Outcome:** ✅ Successful takeoff and landing — the most successful completed aircraft of the program. Built at the university makerspace with another student; hand-launched to remove landing gear from the takeoff problem.
+**Outcome:** ⚠️ Attempt 1 reused the Plane 4 motor and ESC with a 4S battery — the motor failed because the power system was not designed for that voltage. Attempt 2, with SunnySky motors and appropriate electronics, flew successfully for about 30–40 seconds before crashing after visual orientation was lost.
 
 **Key lessons:**
-- Better manufacturing improves repeatability
-- Simpler designs are easier to validate
-- Full flight cycle (takeoff → flight → landing) achieved
+- Power systems must be matched as a system, not upgraded one part at a time
+- Pilot orientation is part of the engineering problem
+- The overall aircraft design was validated in sustained flight
 
 [![Photos & Flight Videos](https://img.shields.io/badge/📁_Photos_&_Flight_Videos-Google_Drive-4285F4?logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1PiaJzF-f68qz-FpzUVIke0YkvXnuFelq?usp=sharing)
 
@@ -96,12 +96,14 @@ Each aircraft was designed and built to answer questions raised by the previous 
 
 ## ✈️ Plane 6 — Simple Trainer
 
-**Objective:** *(to be added)*
+**Objective:** Refine the Plane 5 design into a smaller, higher-quality build and complete a full flight cycle.
 
-**Outcome:** *(to be added)*
+**Outcome:** ✅ Successful takeoff, flight, and landing — the most successful completed aircraft of the program. Built at the university makerspace with another student; hand-launched.
 
 **Key lessons:**
-- *(to be added)*
+- Better manufacturing improves repeatability
+- Simpler designs are easier to validate
+- Full flight cycle (takeoff → flight → landing) achieved
 
 [![Photos & Flight Videos](https://img.shields.io/badge/📁_Photos_&_Flight_Videos-Google_Drive-4285F4?logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1gODa4EXehjri_2UhR_syTH68Lbv6_FR1?usp=sharing)
 
@@ -110,16 +112,19 @@ Each aircraft was designed and built to answer questions raised by the previous 
 ## Engineering Progression
 
 ```
-Plane 1 — Delta Canard        →  wing loading, landing-gear strength
-Plane 2 — Flying Wing         →  lightweight construction, first flight
+Plane 1 — Delta Canard        →  wing loading, thrust-to-weight, landing gear
+Plane 2 — Simplified Tailless →  landing gear geometry, T/W confirmed as a design check
 Plane 3 — Flying Wing V1/V2   →  flying-wing CG & stability
-Plane 4 — Conventional T-Tail →  structures, power matching, sustained flight
-Plane 5 — Conventional        →  manufacturing quality, full flight cycle
-Plane 6 — Simple Trainer      →  (in progress)
+Plane 4 — Conventional T-Tail →  structural vibration, tail reinforcement
+Plane 5 — Conventional        →  power-system matching, sustained flight
+Plane 6 — Simple Trainer      →  manufacturing quality, full flight cycle
 LWPLA Aircraft                →  all lessons applied through a formal
                                  engineering workflow
 ```
 
+Specific carryovers: the thrust-to-weight failures of Planes 1–2 became LWPLA's published thrust and T/W estimation. Plane 3's CG failure became LWPLA's MAC/CG analysis. Plane 5's power-system failure became LWPLA's throttle-limit constraint and planned thrust-stand testing. Plane 6's manufacturing lesson became LWPLA's print-calibration-first approach.
+
+➡️ **Current project: [LWPLA Aircraft](https://github.com/morakah-hub/LWPLA-Aircraft)**
 Specific carryovers: Plane 3's CG failure became LWPLA's MAC/CG analysis. Plane 4's power-system failure became LWPLA's throttle-limit constraint and planned thrust-stand testing. Plane 5's manufacturing lesson became LWPLA's print-calibration-first approach.
 
 ➡️ **Current project: [LWPLA Aircraft](https://github.com/morakah-hub/LWPLA-Aircraft)**
