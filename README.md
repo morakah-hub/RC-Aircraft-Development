@@ -127,4 +127,3 @@ Specific carryovers: the thrust-to-weight failures of Planes 1–2 became LWPLA'
 ➡️ **Current project: [LWPLA Aircraft](https://github.com/morakah-hub/LWPLA-Aircraft)**
 Specific carryovers: Plane 3's CG failure became LWPLA's MAC/CG analysis. Plane 4's power-system failure became LWPLA's throttle-limit constraint and planned thrust-stand testing. Plane 5's manufacturing lesson became LWPLA's print-calibration-first approach.
 
-➡️ **Current project: [LWPLA Aircraft](https://github.com/morakah-hub/LWPLA-Aircraft)**
